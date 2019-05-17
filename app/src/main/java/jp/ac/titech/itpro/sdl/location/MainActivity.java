@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements
                     Location location = locationResult.getLastLocation();
                     double lat = location.getLatitude();
                     double lng = location.getLongitude();
-                    infoView.setText(getString(R.string.latlong_format, lat, lng));
+                    infoView.setText(getString(R.string.info_format, lat, lng));
                 }
             }
         };
