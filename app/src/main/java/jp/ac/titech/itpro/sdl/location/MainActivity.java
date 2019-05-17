@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements
         request.setInterval(10000);
         request.setFastestInterval(5000);
         request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
         callback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
@@ -84,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume");
-        startLocationUpdate(true);
     }
 
     @Override
@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         Log.d(TAG, "onConnected");
+        startLocationUpdate(true);
     }
 
     @Override
